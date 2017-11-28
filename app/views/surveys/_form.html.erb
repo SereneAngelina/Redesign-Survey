@@ -1,0 +1,21 @@
+<%= form_for @survey do |f| %>
+<div class="row">
+          <div class="col-md-12">
+            <h4>Please fill the Survey</h4>
+            <p><%=f.label :question, '1' %>) How often do you visit our page? </p>
+            <%= f.radio_button :answer, 1, id: "answer_1"%>
+            <%= f.label :answer, 'Often'%>
+            <%= f.radio_button :answer, 2, id: "answer_2"%>
+            <%= f.label :answer, 'Daily' %>
+            <%= f.radio_button :answer, 3, id: "answer_3"%>
+            <%= f.label :answer, 'Weekly' %>
+            <%= f.radio_button :answer, 4, id: "answer_4"%>
+            <%= f.label :answer, 'Monthly' %>
+            <%= f.radio_button :answer, 5, id: "answer_5"%>
+            <%= f.label :answer, 'Rarely' %>
+          </div>
+</div>
+<div class:"actions">
+          <%= f.submit "Send", class: "btn btn-block"%>
+</div>
+<% end %>
